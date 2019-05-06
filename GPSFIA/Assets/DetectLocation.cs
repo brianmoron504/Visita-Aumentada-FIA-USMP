@@ -11,7 +11,7 @@ public class DetectLocation : MonoBehaviour {
 	private float proximity = 0.001f;
 	private float sLatitude, sLongitude;
 	public float dLatitude = -6.884687f, dLongitude = 107.605945f;
-	private bool enableByRequest = true;
+    private bool enableByRequest = true;
 	public int maxWait = 10;
 	public bool ready = false;
 	public Text text;
