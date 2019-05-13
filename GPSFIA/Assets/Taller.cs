@@ -9,7 +9,7 @@ public class Taller : MonoBehaviour {
     public List<Location> location = new List<Location>();
     // Use this for initialization
     void Start () {
-        ConsumirServicio();
+        //ConsumirServicio();
         
 	}
 	
@@ -18,20 +18,20 @@ public class Taller : MonoBehaviour {
 		
 	}
 
-    void ConsumirServicio()
-    {
-        string URL = "https://tempapi-fiara.azurewebsites.net/api/location/";
-        var json = new WebClient().DownloadString(URL);
-        dynamic m = JsonConvert.DeserializeObject(json);
-        foreach (var i in m)
-        {
-            if (i.id == 1)
-            {
-               DetectLocation dLatitude = i.minLat;
-                DetectLocation dLongitud = i.minLong;
-            }
-            //location.Add(new Location() { id = i.id, minlat = i.minlat, minlog = i.minlog, name = i.name, maxlat = i.maxlat, maxlong = i.maxlong });
-        }
+    //void ConsumirServicio()
+    //{
+    //    string URL = "https://tempapi-fiara.azurewebsites.net/api/location/";
+    //    var json = new WebClient().DownloadString(URL);
+    //    dynamic m = JsonConvert.DeserializeObject(json);
+    //    foreach (var i in m)
+    //    {
+    //        if (i.id == 1)
+    //        {
+    //           DetectLocation dLatitude = i.minLat;
+    //            DetectLocation dLongitud = i.minLong;
+    //        }
+    //        //location.Add(new Location() { id = i.id, minlat = i.minlat, minlog = i.minlog, name = i.name, maxlat = i.maxlat, maxlong = i.maxlong });
+    //    }
 
-    }
+    //}
 }
